@@ -44,7 +44,7 @@ library
                        , th-expand-syns   >= 0.4  && < 0.5
                        , transformers     >= 0.5  && < 0.6
                        , mtl              >= 2.2  && < 2.3
-                       , beam             >= 0.3  && < 0.5
+                       , beam-core        >= 0.3  && < 0.10
                        , microlens        >= 0.4  && < 0.5
 
 test-suite test-beam-th
