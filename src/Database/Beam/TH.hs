@@ -19,7 +19,7 @@ import Language.Haskell.TH
 import Language.Haskell.TH.Syntax hiding (lift)
 import Language.Haskell.TH.ExpandSyns (expandSyns)
 
-import Database.Beam
+import Database.Beam (Table, TableField, Columnar, PrimaryKey, primaryKey, tableLenses, LensFor(..))
 import Database.Beam.Schema
 import Database.Beam.TH.Internal
 import Lens.Micro (Lens')
@@ -77,7 +77,7 @@ nameLens = do
                              _ -> do
                                signature x
                                pure . ConP lf . pure . VarP $ x)
-  tellD $ ValD (ConP nm fields') (NormalB (VarE 'tableConfigLenses)) []
+  tellD $ ValD (ConP nm fields') (NormalB (VarE 'tableLenses)) []
     where
       renameFields (cname, _, t) = (rename (++ "C") cname, t)
       lens' = ''Lens'
