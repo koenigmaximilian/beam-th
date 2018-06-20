@@ -19,7 +19,8 @@ import Language.Haskell.TH
 import Language.Haskell.TH.Syntax hiding (lift)
 import Language.Haskell.TH.ExpandSyns (expandSyns)
 
-import Database.Beam (Table, TableField, Columnar, PrimaryKey, primaryKey, tableConfigLenses, LensFor(..))
+import Database.Beam
+import Database.Schema
 import Database.Beam.TH.Internal
 import Lens.Micro (Lens')
 
