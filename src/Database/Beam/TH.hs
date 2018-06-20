@@ -20,7 +20,7 @@ import Language.Haskell.TH.Syntax hiding (lift)
 import Language.Haskell.TH.ExpandSyns (expandSyns)
 
 import Database.Beam
-import Database.Schema
+import Database.Beam.Schema
 import Database.Beam.TH.Internal
 import Lens.Micro (Lens')
 
